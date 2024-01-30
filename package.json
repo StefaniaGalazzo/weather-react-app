@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://tuo-username.github.io/tuo-progetto/",
+  "homepage": "https://StefaniaGalazzo.github.io/weather-react-app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -10,11 +10,8 @@ function App() {
   return (
     <Provider store={store}>
       <Routes>
-        <Route index path="/weather-react-app/" element={<Home />} />
-        <Route
-          path="/weather-react-app/forecast-weather/:dt"
-          element={<ForecastPage />}
-        />
+        <Route index path="/" element={<Home />} />
+        <Route path="/forecast-weather/:dt" element={<ForecastPage />} />
         {/* <Route path="/404" element={<ErrorPage />} /> */}
       </Routes>
     </Provider>
