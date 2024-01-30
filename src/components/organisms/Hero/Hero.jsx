@@ -40,7 +40,7 @@ export default function Hero({
           // console.log(position.coords, "position.coords");
           try {
             const response = await axios.get(
-              `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${key}`
+              `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${key}`
             );
             console.log(response.data[0], "responde geo new");
             if (response.data.length > 0) {
