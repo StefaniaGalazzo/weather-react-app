@@ -11,7 +11,10 @@ function App() {
     <Provider store={store}>
       <Routes>
         <Route index path="/weather-react-app/" element={<Home />} />
-        <Route path="/forecast-weather/:dt" element={<ForecastPage />} />
+        <Route
+          path="/weather-react-app/forecast-weather/:dt"
+          element={<ForecastPage />}
+        />
         {/* <Route path="*" element={<ErrorPage />} /> */}
       </Routes>
     </Provider>
