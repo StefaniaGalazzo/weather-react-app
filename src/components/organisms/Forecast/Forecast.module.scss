@@ -1,0 +1,37 @@
+#scrollY {
+  width: 100%;
+  overflow-y: auto;
+  margin-bottom: 100px;
+  .weatherDaysWrapper {
+    overflow: hidden;
+    overflow: auto;
+    grid-auto-flow: column;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    padding: 15px 0;
+    .cardWeaterDay {
+      width: 120px;
+      padding: 10px;
+      border-radius: 18px;
+      background: rgba(194, 233, 254, 0.063);
+      box-shadow: 0 8px 16px -3px rgb(0 2 26 / 50%);
+      backdrop-filter: blur(9.5px);
+      -webkit-backdrop-filter: blur(9.5px);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      &:hover {
+        transform: translateY(-10px) scale(1.1);
+      }
+      p {
+        margin: 0;
+      }
+      img {
+        margin: 10px auto;
+      }
+    }
+  }
+}

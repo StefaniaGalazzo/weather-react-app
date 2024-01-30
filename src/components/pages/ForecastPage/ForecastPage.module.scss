@@ -1,0 +1,20 @@
+#forecastPage {
+  // background: linear-gradient(to top, #e66465 10%, #9198e5 70%);
+  min-height: 100vh;
+  padding: 20%;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(rgba(166, 166, 166, 0.571), rgb(0 0 0 / 65%));
+    z-index: -1;
+  }
+}
+#bgPersonal {
+  background-size: cover !important;
+  background-position: center;
+}

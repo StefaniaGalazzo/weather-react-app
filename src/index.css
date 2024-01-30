@@ -1,0 +1,146 @@
+:root {
+  min-height: 100vh;
+}
+
+html,
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #000;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #17171733;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  background-color: #0000002d;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  height: 5px;
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  background-color: #ffffff65;
+}
+
+/* orbit component */
+.orbit-container {
+  margin: 80px auto;
+  display: grid;
+  width: 100%;
+  place-content: center;
+  overflow: hidden;
+}
+.solar-system {
+  /* height: 500px; */
+  display: grid;
+  place-content: center;
+}
+
+.orbit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fafbfc;
+  border-radius: 50%;
+  margin: 40px;
+}
+
+.earth-orbit {
+  width: 100px;
+  height: 100px;
+  -webkit-animation: orbit 12s linear 0s infinite;
+}
+.earth {
+  background-color: rgb(214, 78, 0);
+  box-shadow: inset 0px 5px 5px #ee764a;
+  width: 22px !important;
+  height: 22px !important;
+  top: -11px !important;
+}
+.moon-orbit {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  border-color: #ffffff7e;
+  -webkit-animation: orbit 3.5s linear 0s infinite;
+}
+.venus {
+  background-color: #1e63be;
+  box-shadow: inset 0 5px 5px #00ba54;
+}
+.venus-orbit {
+  width: 300px;
+  height: 300px;
+  -webkit-animation: orbit 15s linear 0s infinite;
+}
+
+.new-orbit {
+  width: 180px;
+  height: 180px;
+  -webkit-animation: orbit 15s linear 0s infinite;
+}
+.new {
+  background-color: #d47415;
+  box-shadow: inset 0 5px 5px rgb(186, 161, 0);
+  width: 25px !important;
+  height: 25px !important;
+  top: -12px !important;
+}
+.moon {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 15px !important;
+  height: 15px !important;
+  background-color: #ebebeb;
+  box-shadow: inset 0 5px 5px #979797;
+  border-radius: 50%;
+  transform: rotate(180deg);
+}
+.planet {
+  position: absolute;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  transform: rotate(180deg);
+  border-radius: 50%;
+}
+
+.sun {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: orange;
+  box-shadow: inset 0 10px 5px rgba(255, 255, 0, 0.616);
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 976px) {
+  .solar-system {
+    width: 100vw !important;
+  }
+
+  /* .venus-orbit {
+    width: 290px;
+    height: 290px;
+  } */
+
+  /* .earth-orbit {
+    width: 100px;
+    height: 100px;
+  } */
+}
