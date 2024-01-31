@@ -16,7 +16,7 @@ export default function SearchNav() {
   // //search
   const handleSearch = async (e) => {
     // sanificazione input
-    const inputValue = e.target.value.trim(); // rimuovo spazi bianchi
+    const inputValue = e.target.value; // rimuovo spazi bianchi
     // const sanitizedInput = inputValue.replace(/[^a-zA-Z0-9\s]/g); //regex: solo caratteri alfanumerici e spazi
     inputValue === "undefined" || query === "undefined"
       ? dispatch(setQuery(""))

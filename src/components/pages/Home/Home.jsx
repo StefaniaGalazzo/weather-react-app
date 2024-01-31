@@ -47,7 +47,9 @@ export default function Home() {
           />
           <Container fluid>
             <h3 className="text-center text-white display-4 m-0">
-              {locationData && getDateFromSeconds(locationData.dt).slice(-5)}
+              {locationData &&
+                locationData.dt &&
+                getDateFromSeconds(locationData.dt).slice(-5)}
             </h3>
             <Row className="align-items-center g-5 justify-content-center px-md-5">
               <Col sm={12} md={8} lg={6}>
