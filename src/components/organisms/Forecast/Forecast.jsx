@@ -25,7 +25,7 @@ export default function Forecast({
               return (
                 <Link
                   key={day.dt}
-                  to={`/forecast-weather/${day.dt}`}
+                  to={`/weather-react-app/forecast-weather/${day.dt}`}
                   className={`${styles.cardWeaterDay}`}
                 >
                   <h6 className="text-white text-center">
