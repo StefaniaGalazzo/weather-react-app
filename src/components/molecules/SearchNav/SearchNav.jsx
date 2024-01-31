@@ -17,18 +17,18 @@ export default function SearchNav() {
   const handleSearch = async (e) => {
     // sanificazione input
     const inputValue = e.target.value.trim(); // rimuovo spazi bianchi
-    const sanitizedInput = inputValue.replace(/[^a-zA-Z0-9\s]/g); //regex: solo caratteri alfanumerici e spazi
-    sanitizedInput === "undefined" || query === "undefined"
+    // const sanitizedInput = inputValue.replace(/[^a-zA-Z0-9\s]/g); //regex: solo caratteri alfanumerici e spazi
+    inputValue === "undefined" || query === "undefined"
       ? dispatch(setQuery(""))
-      : dispatch(setQuery(sanitizedInput));
+      : dispatch(setQuery(inputValue));
     if (
-      sanitizedInput !== "undefined" &&
+      inputValue !== "undefined" &&
       query !== "undefined" &&
       e.key === "Enter"
     ) {
       try {
-        dispatch(fetchLocation(sanitizedInput));
-        dispatch(fetchForecast(sanitizedInput));
+        dispatch(fetchLocation(inputValue));
+        dispatch(fetchForecast(inputValue));
       } catch (error) {
         console.error("Errore nell'handleSearch in SearchNAv:", error.message);
       }
@@ -63,6 +63,7 @@ export default function SearchNav() {
         size="18px"
         className="position-absolute"
         style={{ top: "5px", right: "5px" }}
+        onClick={handleSearch}
       />
     </div>
   );
