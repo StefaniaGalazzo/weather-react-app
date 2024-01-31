@@ -4,7 +4,6 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import { Route, Routes } from "react-router-dom";
 import ForecastPage from "./components/pages/ForecastPage/ForecastPage";
-// import ErrorPage from "./components/pages/404/404";
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
           path="/weather-react-app/forecast-weather/:dt"
           element={<ForecastPage />}
         />
-        {/* <Route path="*" element={<ErrorPage />} /> */}
       </Routes>
     </Provider>
   );

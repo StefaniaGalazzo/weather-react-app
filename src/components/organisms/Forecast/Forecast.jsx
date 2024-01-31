@@ -26,7 +26,7 @@ export default function Forecast({
                 <Link
                   key={day.dt}
                   to={`/weather-react-app/forecast-weather/${day.dt}`}
-                  className={`${styles.cardWeaterDay}`}
+                  className={`${styles.cardWeaterDay} `}
                 >
                   <h6 className="text-white text-center">
                     {formattedDate.toString()}
@@ -50,7 +50,7 @@ export default function Forecast({
               className={`m-auto ${styles.cardWeaterDay}`}
               style={{ maxWidth: "1000px", width: "90vw" }}
             >
-              <h6 className="text-white display-4 text-center">{fallback}</h6>
+              <h6 className="text-white display-4  text-center">{fallback}</h6>
             </div>
           )}
         </div>
