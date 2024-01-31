@@ -9,7 +9,10 @@ export default function Header({
 }) {
   return (
     <>
-      <Nav title={"Weather App"} subTitle={"Discover weater in your country"} />
+      <Nav
+        title={"Weather App"}
+        subTitle={"Discover weather in your country"}
+      />
       <Hero
         getDateFromSeconds={getDateFromSeconds}
         convertKelvinToCelsius={convertKelvinToCelsius}
